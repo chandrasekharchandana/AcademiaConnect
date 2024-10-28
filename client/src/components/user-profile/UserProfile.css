@@ -93,7 +93,12 @@
   display: flex;
   justify-content: space-between;
 }
-
+.events-header {
+  font-size: 2em;
+  color: #172d66;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 /* Events Section */
 .events-section {
   width: 48%; /* Slightly less than posts */
@@ -106,12 +111,7 @@
   margin-right: 20px; /* Space between events and posts */
 }
 
-.events-header {
-  font-size: 2em;
-  color: #172d66;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+
 
 .events-list {
   display: flex;
@@ -186,4 +186,194 @@
 
 .scroll-button:hover {
   background-color: #45a049; /* Darker green on hover */
+}
+
+.attendance-chart-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.attendance-chart {
+  width: 60%; /* Adjust width as needed */
+}
+
+.legend-section {
+  width: 35%; /* Adjust width as needed */
+  margin-left: 20px; /* Spacing between chart and legend */
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.legend-icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.present-circle {
+  background-color: #4caf50; /* Green for present */
+}
+
+.absent-circle {
+  background-color: #f44336; /* Red for absent */
+}
+
+.remaining-circle {
+  background-color: #ffc107; /* Yellow for remaining */
+}
+
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.modal-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  
+}
+
+/* Title */
+.modal-container h2 {
+  margin-bottom: 20px;
+}
+
+/* Image preview container */
+.image-preview-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ddd;
+}
+
+/* Avatar preview */
+.avatar-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.3s ease;
+}
+
+/* Placeholder for no image selected */
+.placeholder-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Edit buttons for rotating and resetting image */
+.edit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.edit-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+}
+
+.edit-buttons button:hover {
+  background-color: #ddd;
+}
+
+/* Choose Image button */
+.choose-image {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px 25px;
+  border: none;
+  border-radius: 4px;
+  background: #5a99d4; /* Updated color */
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.choose-image:hover {
+  background: #4a8ac4;
+}
+
+/* Button container to align buttons to the bottom right */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 230px; /* Increased gap for better visibility */
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  
+}
+
+/* Save and Cancel buttons */
+.save {
+  padding: 2px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #28a745; /* Updated to green */
+  transition: background 0.3s;
+}
+
+.save:hover {
+  background-color: #218838;
+}
+
+.cancel {
+  padding: 2px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #dc3545; /* Updated to red */
+  transition: background 0.3s;
+}
+
+.cancel:hover {
+  background-color: #c82333;
 }
